@@ -1,0 +1,13 @@
+{
+  "name": "safari-clean-speed",
+  "version": "1.0.0",
+  "description": "iOS & macOS Safari Web Extension + Userscript: Clean Read Unfolder, Native HTML5 0.5x-4x Video Speed & PiP, and Clean Markdown Clipper.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "build:icons": "node scripts/generate-icons.mjs",
+    "sync:docs": "cp src/clean-speed-engine.mjs docs/clean-speed-engine.js",
+    "test": "node --test tests/safari-clean.test.mjs"
+  }
+}

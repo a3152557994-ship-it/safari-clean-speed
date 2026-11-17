@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safari Clean &amp; Speed</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="hdr">
+    <div class="brand">
+      <img src="icons/icon-32.png" width="24" height="24" alt="Icon">
+      <div>
+        <h1>Clean &amp; Speed</h1>
+        <p id="hostLabel">Safari 双端净阅与倍速</p>
+      </div>
+    </div>
+    <span class="badge">MV3</span>
+  </header>
+
+  <section class="card">
+    <div class="row-between">
+      <span class="label">网页折叠与强跳弹窗清理</span>
+      <button id="cleanBtn" class="btn-primary">⚡ 立即净阅展开</button>
+    </div>
+    <p id="cleanStatus" class="hint">自动展开折叠遮罩 · 还原滚动锁</p>
+  </section>
+
+  <section class="card">
+    <div class="row-between">
+      <span class="label">HTML5 视频倍速</span>
+      <strong id="rateValue" class="rate-pill">1.0x</strong>
+    </div>
+    <div class="speed-grid" id="speedGrid">
+      <button data-rate="0.75">0.75x</button>
+      <button data-rate="1" class="active">1.0x</button>
+      <button data-rate="1.25">1.25x</button>
+      <button data-rate="1.5">1.5x</button>
+      <button data-rate="2">2.0x</button>
+      <button data-rate="3">3.0x</button>
+      <button data-rate="4">4.0x</button>
+      <button id="pipBtn" class="pip-btn">📺 画中画</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <button id="clipMdBtn" class="btn-outline">📝 一键复制干净 Markdown</button>
+    <p id="mdStatus" class="hint">自动剥离广告弹窗，保留代码块与标题层级</p>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>

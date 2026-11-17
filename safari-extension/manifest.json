@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Safari Clean & Speed — 净阅展开与倍速画中画",
+  "short_name": "CleanSpeed",
+  "version": "1.0.0",
+  "description": "自动展开折叠全文遮罩、拦截强跳 App 弹窗、原生 HTML5 视频 0.5x–4x 倍速记忆与画中画、一键提取干净 Markdown。",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png",
+    "256": "icons/icon-256.png",
+    "512": "icons/icon-512.png"
+  },
+  "action": {
+    "default_title": "Safari Clean & Speed",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["rules-clean-read.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "safari": {
+      "strict_min_version": "15.4"
+    }
+  }
+}

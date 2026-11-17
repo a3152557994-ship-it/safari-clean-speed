@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safari Clean &amp; Speed — iOS/macOS 网页净阅展开 · 0.5x–4x 原生视频倍速画中画 · 一键转干净 Markdown</title>
+  <meta name="description" content="专为 iOS 与 macOS Safari 打造的轻量合规阅读与倍速工具：0.1 秒自动展开折叠全文遮罩、拦截强跳 App 弹窗、原生 HTML5 视频 0.5x–4x 倍速记忆与悬浮画中画、一键提取干净 GFM Markdown。¥8 / $2.99 一次性买断。">
+  <link rel="canonical" href="https://a3152557994-ship-it.github.io/safari-clean-speed/">
+  <link rel="icon" type="image/png" href="./icon-192.png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <meta property="og:title" content="Safari Clean & Speed — 净阅展开 · 0.5x–4x 倍速画中画 · Markdown 剪藏">
+  <meta property="og:description" content="拒绝『打开 App 阅读剩余 68% 全文』遮罩！支持 iOS/macOS Safari 书签小工具、Stay/Userscripts 脚本与原生 MV3 扩展。">
+  <meta property="og:url" content="https://a3152557994-ship-it.github.io/safari-clean-speed/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="./style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Safari Clean & Speed",
+    "operatingSystem": "iOS 15.4+, iPadOS 15.4+, macOS 12+",
+    "applicationCategory": "BrowserApplication",
+    "description": "Clean Read folded-article unfolder, app-redirect modal blocker, native HTML5 video 0.5x-4x speed & Picture-in-Picture controller, and clean GFM Markdown clipper for Safari.",
+    "offers": {
+      "@type": "Offer",
+      "price": "2.99",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img src="./icon-192.png" width="34" height="34" alt="Safari Clean & Speed Logo" class="brand-logo">
+        <div>
+          <span class="brand-title">Safari Clean &amp; Speed</span>
+          <span class="brand-sub" data-i18n="brandSub">iOS / macOS 双端净阅与倍速扩展</span>
+        </div>
+      </div>
+      <nav class="topnav">
+        <a href="#sandbox" data-i18n="navSandbox">在线沙盒实测</a>
+        <a href="#install" data-i18n="navInstall">免费书签 &amp; 脚本</a>
+        <a href="#pro" class="pro-pill-link">Pro ¥8 / $2.99</a>
+        <button id="langToggle" class="btn-ghost" type="button">EN / 中文</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-badge" data-i18n="heroBadge">100% 本地合规运行 · 零隐私上传 · 严守标准 HTML5 API（不碰 VIP 破解与贴片广告）</div>
+      <h1 data-i18n="heroTitle">告别「打开 App 阅读全文」遮罩，<br>给 Safari 补齐 0.5x–4x 倍速画中画与 Markdown 剪藏</h1>
+      <p class="hero-lead" data-i18n="heroLead">
+        搜技术贴被折叠半截？手机看公开课没有 2.5x/3.0x 倍速？点下方交互沙盒按钮，无需安装任何插件，当场体验 0.1 秒净阅展开、原生倍速画中画与一键提取纯净 Markdown。
+      </p>
+      <div class="hero-actions">
+        <a href="#sandbox" class="btn-primary btn-lg" data-i18n="ctaTrySandbox">⚡ 立即在下方沙盒点按实测</a>
+        <a href="#install" class="btn-secondary btn-lg" data-i18n="ctaGetFree">免费领取 Safari 净阅书签工具</a>
+      </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE SANDBOX -->
+    <section id="sandbox" class="sandbox-section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">LIVE INTERACTIVE SANDBOX</span>
+          <h2 data-i18n="sandboxTitle">交互演示场：点一下按钮，当场处决折叠遮罩与无倍速视频框</h2>
+        </div>
+        <button id="resetSandboxBtn" class="btn-ghost" type="button" data-i18n="resetBtn">🔄 还原折叠污染状态</button>
+      </div>
+
+      <div class="action-bar">
+        <button id="btnUnfoldNow" class="btn-primary" type="button">⚡ 0.1 秒净阅展开全文</button>
+        <button id="btnSpeed3x" class="btn-accent" type="button">🎬 一键 3.0x 倍速</button>
+        <button id="btnTogglePip" class="btn-secondary" type="button">📺 悬浮画中画 (PiP)</button>
+        <button id="btnExtractMd" class="btn-dark" type="button">📝 一键转干净 Markdown</button>
+      </div>
+
+      <div id="sandboxTelemetry" class="telemetry-bar">
+        <span>状态：当前模拟移动端网页被折叠至 38% 高度，且带有底部「打开 App 阅读剩余全文」诱导条与无倍速视频框。快捷键：<code>[</code> 减速 · <code>]</code> 加速 · <code>\</code> 还原 1.0x</span>
+      </div>
+
+      <div class="sandbox-grid">
+        <!-- Mock Browser Viewport -->
+        <div class="browser-mock">
+          <div class="browser-chrome">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="url-bar">🔒 m.tech-notes.example/webkit-rendering-2026</div>
+            <span id="mockSpeedBadge" class="speed-badge">1.0x</span>
+          </div>
+
+          <div class="browser-body" id="sandboxViewport">
+            <!-- Native HTML5 Video Box -->
+            <div class="video-box">
+              <video id="demoVideo" playsinline muted loop></video>
+              <div class="video-overlay-bar">
+                <span class="video-caption">HTML5 公开课演示流（原生无倍速菜单）</span>
+                <div class="speed-pills" id="sandboxSpeedPills">
+                  <button type="button" data-rate="0.5">0.5x</button>
+                  <button type="button" data-rate="1.0" class="active">1.0x</button>
+                  <button type="button" data-rate="1.5">1.5x</button>
+                  <button type="button" data-rate="2.0">2.0x</button>
+                  <button type="button" data-rate="3.0">3.0x</button>
+                  <button type="button" data-rate="4.0">4.0x</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Folded Article Content -->
+            <div id="sandboxArticleHost"></div>
+          </div>
+        </div>
+
+        <!-- Clean Markdown Output Drawer -->
+        <div class="md-panel">
+          <div class="md-panel-head">
+            <div>
+              <h3 data-i18n="mdPanelTitle">纯净 GFM Markdown 提取结果</h3>
+              <p data-i18n="mdPanelSub">自动剥离强跳 App 弹窗、推荐流与脚本噪音，完整保留代码块与表格</p>
+            </div>
+            <div class="md-head-btns">
+              <select id="mdTemplateSelect" aria-label="Markdown Template">
+                <option value="obsidian">Obsidian YAML 模板</option>
+                <option value="notion">Notion 剪藏模板 (Pro)</option>
+                <option value="logseq">Logseq 属性模板 (Pro)</option>
+              </select>
+              <button id="copyMdBtn" class="btn-secondary btn-sm" type="button">复制 .md</button>
+              <button id="downloadMdBtn" class="btn-ghost btn-sm" type="button">下载 .md</button>
+            </div>
+          </div>
+          <textarea id="mdOutput" spellcheck="false" readonly placeholder="点击左侧『📝 一键转干净 Markdown』实时查看提取结果..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREE BOOKMARKLET & EXTENSION READY -->
+    <section id="install" class="install-section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">INSTANT USE TODAY ON iOS &amp; macOS</span>
+          <h2 data-i18n="installTitle">今天立刻可用：免费书签小工具 + 标准 Safari Web Extension 源码</h2>
+        </div>
+      </div>
+
+      <div class="cards-3">
+        <div class="feature-card">
+          <span class="step-tag">FREE · 零安装即用</span>
+          <h3>① Safari 免费净阅书签栏工具</h3>
+          <p>支持 iPhone / iPad / Mac Safari。将下方蓝色按钮直接拖到桌面 Safari 书签栏，或在手机复制代码存为书签，遇到折叠网页点一下立即展开全文并切换 2x 倍速。</p>
+          <div class="bookmarklet-box">
+            <a id="bookmarkletLink" class="bookmarklet-drag" href="#">⚡ Clean &amp; 2x Speed</a>
+            <button id="copyBookmarkletBtn" class="btn-secondary btn-sm" type="button">复制书签脚本代码</button>
+          </div>
+          <p id="bookmarkletHint" class="small-muted">提示：macOS 可直接按住蓝色胶囊拖进顶部收藏夹栏。</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="step-tag">PRO · 全自动免点按</span>
+          <h3>② iOS / macOS Stay &amp; Userscripts 脚本包</h3>
+          <p>解锁 Pro 后一键生成专属 <code>safari-clean-speed.user.js</code>，导入免费开源容器 Stay / Userscripts 后，全站自动展开折叠遮罩、按域名自动记忆倍速（0.5x–4.0x）并启用快捷键。</p>
+          <a href="#pro" class="btn-primary btn-block">前往订制并下载 Pro 用户脚本 →</a>
+        </div>
+
+        <div class="feature-card">
+          <span class="step-tag">APPLE NATIVE MV3</span>
+          <h3>③ 原生 Safari Web Extension 工程</h3>
+          <p>仓库内置完整 <code>safari-extension/</code> Manifest V3 标准目录（含独立 <code>rules-clean-read.js</code>、Shadow 零污染倍速控制器与全尺寸图标），支持 <code>xcrun safari-web-extension-converter</code> 一键编译。</p>
+          <a href="https://github.com/a3152557994-ship-it/safari-clean-speed/tree/main/safari-extension" target="_blank" rel="noopener" class="btn-secondary btn-block">查看 GitHub MV3 扩展源码</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRO UNLOCK & PRICING -->
+    <section id="pro" class="pro-section">
+      <div class="pro-grid">
+        <div class="pro-pitch">
+          <span class="eyebrow">ONE-TIME BUYOUT · NO SUBSCRIPTION</span>
+          <h2>Pro 完整版买断：<span class="price-highlight">¥8 / $2.99</span> 永久有效</h2>
+          <p class="pro-desc">拒绝订阅制割韭菜！一杯豆浆钱一次性解锁全站自动规则包、按域名倍速记忆与 Obsidian/Notion 批量剪藏模板。</p>
+          <ul class="check-list">
+            <li>✅ <strong>全站自动净阅规则包 (Userscript)</strong>：CSDN / 知乎移动版 / 简书 / 百家号 / 门户资讯 / 海外社区打开即自动展开，无需每次手点</li>
+            <li>✅ <strong>按域名记忆默认倍速 (0.5x–4.0x) + 自定义快捷键生成器</strong></li>
+            <li>✅ <strong>Obsidian / Notion / Logseq 结构化 Markdown 剪藏模板无限导出</strong></li>
+            <li>✅ <strong>离线 Ed25519 公钥验签激活</strong>：不绑手机号、零联网追踪，iOS 与 Mac 多设备通用同一枚 <code>OPC1.</code> 激活码</li>
+          </ul>
+
+          <div class="order-box">
+            <h4>📬 获取 Pro 激活码（一次性 ¥8 / $2.99）</h4>
+            <p>发送邮件注明 <strong><code>safari-clean-speed</code></strong> 至以下任一邮箱，付款后即发永久 <code>OPC1.</code> 激活码：</p>
+            <div class="email-chips">
+              <a class="chip" href="mailto:3152557994@qq.com?subject=Purchase%20safari-clean-speed%20Pro%20(%C2%A58)&body=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E8%B4%AD%E4%B9%B0%20safari-clean-speed%20Pro%20%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E7%A0%81%EF%BC%88%C2%A58%20%2F%20%242.99%EF%BC%89%E3%80%82">📧 3152557994@qq.com</a>
+              <a class="chip" href="mailto:a3152557994@gmail.com?subject=Purchase%20safari-clean-speed%20Pro%20(%242.99)&body=Hi%2C%20I%20would%20like%20to%20purchase%20a%20safari-clean-speed%20Pro%20license%20(%C2%A58%20%2F%20%242.99).">📧 a3152557994@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pro-console">
+          <div class="license-status-row">
+            <span class="status-dot" id="proStatusDot"></span>
+            <strong id="proStatusText">当前状态：免费基础版（输入 OPC1. 激活码解锁 Pro）</strong>
+          </div>
+
+          <label class="field-label" for="licenseInput">OPC1 离线激活码（Ed25519 验签）</label>
+          <div class="input-row">
+            <input id="licenseInput" type="text" placeholder="OPC1.eyJ2IjoxLCJwIjoic2FmYXJpLWNsZWFuLXNwZWVkIi..." autocomplete="off">
+            <button id="verifyLicenseBtn" class="btn-primary" type="button">验证激活</button>
+          </div>
+          <p id="licenseFeedback" class="small-muted">公钥指纹：MCowBQYDK2VwAyEAP5NCVP7C...SXys=（100% 本地 WebCrypto 验签）</p>
+
+          <hr class="divider">
+
+          <h4>🛠️ Pro 专属订制生成器</h4>
+          <div class="config-grid">
+            <div>
+              <label class="field-label" for="proDefaultSpeed">默认自动倍速</label>
+              <select id="proDefaultSpeed">
+                <option value="1.0">1.0x（不主动改速）</option>
+                <option value="1.25">1.25x 轻快听课</option>
+                <option value="1.5" selected>1.5x 高效刷课</option>
+                <option value="2.0">2.0x 极速浏览</option>
+                <option value="3.0">3.0x 速览复习</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label" for="proPipKey">画中画快捷键</label>
+              <input id="proPipKey" type="text" maxlength="1" value="p">
+            </div>
+          </div>
+
+          <div class="pro-download-actions">
+            <button id="downloadUserscriptBtn" class="btn-primary btn-block" type="button">🔒 下载全站自动净阅 + 倍速记忆脚本 (.user.js)</button>
+            <button id="downloadClipPackBtn" class="btn-secondary btn-block" type="button">🔒 下载 Obsidian / Notion 剪藏模板包 (.md)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Safari Clean &amp; Speed · 合规声明：本扩展与脚本仅作用于网页排版折叠层、标准 HTML5 <code>&lt;video&gt;</code> 倍速/画中画接口与正文 Markdown 提取，绝不提供任何长视频平台 VIP 绕过、DRM 解密或去贴片广告功能。</p>
+      <p>Contact: <a href="mailto:3152557994@qq.com">3152557994@qq.com</a> / <a href="mailto:a3152557994@gmail.com">a3152557994@gmail.com</a> · <a href="./llms.txt">llms.txt</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

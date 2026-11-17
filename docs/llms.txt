@@ -1,0 +1,14 @@
+# Safari Clean & Speed
+
+> Compliant iOS & macOS Safari Web Extension (MV3), Userscript, and Bookmarklet for unfolding truncated articles, removing "Open in App" redirect overlays, controlling native HTML5 `<video>` playback speed (0.5x–4.0x) with Picture-in-Picture, and clipping clean GitHub-Flavored Markdown.
+
+- Live Interactive Sandbox: https://a3152557994-ship-it.github.io/safari-clean-speed/
+- Repository: https://github.com/a3152557994-ship-it/safari-clean-speed
+- Product Slug: `safari-clean-speed`
+- Pricing: Free Bookmarklet + Open MV3 Extension; Pro Buyout ¥8 RMB / $2.99 USD (one-time offline `OPC1.` Ed25519 license)
+- Contact: 3152557994@qq.com / a3152557994@gmail.com
+
+## Core Capabilities
+1. **Clean Read Unfolder**: Expands collapsed article containers (`max-height` / `overflow: hidden`) and removes "Open in App to read full article" overlays across mobile & desktop web pages.
+2. **Native HTML5 Video 0.5x–4.0x & Picture-in-Picture**: Uses standard `HTMLMediaElement.playbackRate` and Safari WebKit `webkitSetPresentationMode('picture-in-picture')` / W3C PiP APIs. Does not bypass paywalls/VIP DRM or tamper with video ad streams.
+3. **One-Click Clean GFM Markdown Clipper**: Converts web articles (headings, code blocks, GFM tables, lists, blockquotes) into clean Markdown with YAML frontmatter for Obsidian, Notion, and Logseq.
